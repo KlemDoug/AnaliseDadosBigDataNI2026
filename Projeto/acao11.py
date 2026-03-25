@@ -17,3 +17,4 @@ def desconto_usuario(valor_final,valor_compra):
 
     else:
         print("Resposta inválida. Digite apenas SIM ou NAO")
+
