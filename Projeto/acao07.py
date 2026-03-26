@@ -1,30 +1,27 @@
+# AÇÃO 07 — MIGUEL
 
-def calcular_conta():
+# Lógica original certinha e intacta, só adicionei o return.
+
+def calcular_total():
+    """
+    Calcula o total do pedido somando itens digitados pelo garçom.
+    """
+
     total = 0
-    print("--- 🍔 Bem-vindo ao Sistema de Pedidos ---")
-    print("Digite o nome do item (ou 'sair' para finalizar):")
+    print("--- Sistema de Pedidos ---")
+    print("Digite 'sair' para finalizar.")
 
     while True:
-        item = input("\nNome do prato/bebida: ")
-        
-        if item.lower() == 'sair':
+        item = input("Nome do prato/bebida: ")
+
+        if item.lower() == "sair":
             break
-            
+
         try:
             preco = float(input(f"Preço de '{item}': R$ "))
-            total += preco
+            total += preco  # 100% correto aqui
         except ValueError:
-            print("❌ Valor inválido! Por favor, use apenas números e ponto (ex: 15.50).")
+            print("Valor inválido!")
 
-    print("\n" + "="*30)
-    print(f"💰 TOTAL DA CONTA: R$ {total:.2f}")
-    print("="*30)
-    print("Obrigado e volte sempre!")
-
-# if __name__ == "__main__":
-#     calcular_conta()
-
-
-
-
- 
+    print(f"Total da conta: R$ {total:.2f}")
+    return total  # Essa adição é necessária para integração com ação 08

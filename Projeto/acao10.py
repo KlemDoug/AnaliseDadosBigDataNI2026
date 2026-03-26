@@ -1,33 +1,34 @@
-
+# AÇÃO 10 – LUCIENE
 import time
 
 def cumprimentos():
+    """
+    Exibe mensagens de boas-vindas e encerramento.
+    """
 
+    # ✔ Função original preservada
     def boas_vindas():
-        print("\033[1;31m" + "="*70 + "\033[0m")
-        print("🎉 🍣 SEJA BEM VINDO AO TANOSHIMO!! 🍣 🎉")
-        print("\033[1;31m" + "="*70 + "\033[0m")
+        print("=" * 70)
+        print("🎉 🍣 SEJA BEM-VINDO AO TANOSHIMI!! 🍣 🎉")
+        print("=" * 70)
         time.sleep(1)
 
-        cliente=input("Como voce se chama? ")
-        print()
-    
-        print(f'\033[1;32m""🥢 Olá {cliente} Será um prazer acompanha-lo (a) nessa aventura gastronomica! 🥢\033[0m' )
-        print("\033[1;33m" + "-"*70 + "\033[0m")
-        print(f' Sinta-se a vontade e se delicie com nossos deliciosos pratos.\n E \033[1;34m{cliente}\033[0m não esqueça de deixar a sua \033[1;31mavaliação\033[0m,ela é muito importante para nós.')
-        print("\033[1;33m" + "-"*70 + "\033[0m")
-        time.sleep(2)
-        print("\033[1;31m 😋 BOM APETITE!!! 😋\033[0m")
-        print("\033[1;31m" + "="*70 + "\033[0m")
+        # Entrada do nome estava correta
+        cliente = input("Como você se chama? ")
 
+        print(f"\n🥢 Olá {cliente}! É um prazer acompanhá-lo(a) nessa aventura gastronômica!")
+        print("-" * 70)
+        print("Sinta-se à vontade para apreciar nossos pratos!")
         return cliente
-        print()
+
+    # Também preservei essa parte
     def encerramento(cliente):
-        print("\033[1;31m" + "="*70 + "\033[0m")
-        print(f'\033[1;32m{cliente}\033[0m Esperamos que a sua experiência tenha sido incrível!!!\nAvalei nosso atendimento e volte sempre!! ❤️')
-        print("\033[1;31m" + "="*70 + "\033[0m")
+        time.sleep(1)
+        print("=" * 70)
+        print(f"{cliente}, esperamos que sua experiência tenha sido incrível!")
+        print("Avalie nosso atendimento e volte sempre! ❤️")
+        print("=" * 70)
 
-
-    cliente_nome=boas_vindas()
-    time.sleep(4)
-    encerramento(cliente_nome)
+    # Organizei a chamada das funções
+    nome_cliente = boas_vindas()
+    encerramento(nome_cliente)

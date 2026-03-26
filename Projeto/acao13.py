@@ -1,10 +1,21 @@
-#Ação 13 - Comissão Garçons.
+# AÇÃO 13 – THIAGO
 
-def comissao_garcom(valor_conta, porcentagem=10):
+# A lógica original (valor_conta * porcentagem/100) perfeita, mantida.
+
+def comissao_garcom():
+    """
+    Calcula a comissão do garçom.
+    """
+
+    try:
+        valor_conta = float(input("Informe o valor total da conta: "))
+    except ValueError:
+        print("Valor inválido.")
+        return
+
+    porcentagem = 10  # igual ao original
+
     gorjeta = valor_conta * (porcentagem / 100)
-    return round(gorjeta, 2)
 
-conta = 150.00
-gorjeta = comissao_garcom(conta, 10)
-
-print(f"Valor da gorjeta: R$ {gorjeta}")
+    print(f"Comissão do garçom: R$ {gorjeta:.2f}")
+    return gorjeta

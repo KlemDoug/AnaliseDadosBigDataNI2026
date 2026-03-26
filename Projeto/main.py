@@ -5,7 +5,7 @@
 # Importação das funções de cada colaborador
 from acao01 import exibir_cardapio
 from acao02 import abrir_mesa
-from acao03 import add_item_pedido
+from acao3 import add_item_pedido
 from acao04 import vincular_garcom
 from acao05 import gerar_id_pedido
 from acao06 import buscar_pedido
